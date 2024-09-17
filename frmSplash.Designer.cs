@@ -28,12 +28,14 @@
         /// </summary>
         private void InitializeComponent()
         {
+            components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmSplash));
             label1 = new Label();
             carregamentoFalso = new ProgressBar();
             pictureBox1 = new PictureBox();
             pictureBox2 = new PictureBox();
             lblLoading = new Label();
+            tmrLoading = new System.Windows.Forms.Timer(components);
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
             SuspendLayout();
@@ -60,7 +62,7 @@
             // 
             pictureBox1.BackgroundImageLayout = ImageLayout.Stretch;
             pictureBox1.Cursor = Cursors.AppStarting;
-            pictureBox1.Image = Properties.Resources.caveirinha;
+            pictureBox1.Image = (Image)resources.GetObject("pictureBox1.Image");
             pictureBox1.Location = new Point(428, 62);
             pictureBox1.Name = "pictureBox1";
             pictureBox1.Size = new Size(423, 379);
@@ -69,7 +71,7 @@
             // 
             // pictureBox2
             // 
-            pictureBox2.Image = Properties.Resources.desenho;
+            pictureBox2.Image = (Image)resources.GetObject("pictureBox2.Image");
             pictureBox2.Location = new Point(202, 62);
             pictureBox2.Name = "pictureBox2";
             pictureBox2.Size = new Size(319, 454);
@@ -86,6 +88,12 @@
             lblLoading.Size = new Size(176, 46);
             lblLoading.TabIndex = 5;
             lblLoading.Text = "Loading...";
+            // 
+            // tmrLoading
+            // 
+            tmrLoading.Enabled = true;
+            tmrLoading.Interval = 1000;
+            tmrLoading.Tick += tmrLoading_Tick;
             // 
             // frmSplash
             // 
@@ -119,5 +127,6 @@
         private PictureBox pictureBox1;
         private PictureBox pictureBox2;
         private Label lblLoading;
+        private System.Windows.Forms.Timer tmrLoading;
     }
 }
