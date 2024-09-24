@@ -44,6 +44,7 @@
             buttonResultado = new Button();
             buttonMultiplica = new Button();
             text = new TextBox();
+            button10 = new Button();
             SuspendLayout();
             // 
             // button1
@@ -181,7 +182,7 @@
             buttonResultado.Font = new Font("Segoe UI Black", 18F, FontStyle.Bold, GraphicsUnit.Point, 0);
             buttonResultado.Location = new Point(234, 416);
             buttonResultado.Name = "buttonResultado";
-            buttonResultado.Size = new Size(198, 88);
+            buttonResultado.Size = new Size(96, 88);
             buttonResultado.TabIndex = 13;
             buttonResultado.Text = "=";
             buttonResultado.UseVisualStyleBackColor = true;
@@ -204,11 +205,22 @@
             text.Size = new Size(402, 101);
             text.TabIndex = 15;
             // 
+            // button10
+            // 
+            button10.Font = new Font("Segoe UI Black", 18F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            button10.Location = new Point(336, 416);
+            button10.Name = "button10";
+            button10.Size = new Size(96, 88);
+            button10.TabIndex = 16;
+            button10.Text = "C";
+            button10.UseVisualStyleBackColor = true;
+            // 
             // calculadora
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(461, 528);
+            Controls.Add(button10);
             Controls.Add(text);
             Controls.Add(buttonMultiplica);
             Controls.Add(buttonResultado);
@@ -249,5 +261,6 @@
         private Button buttonResultado;
         private Button buttonMultiplica;
         private TextBox text;
+        private Button button10;
     }
 }
