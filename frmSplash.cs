@@ -19,13 +19,18 @@ namespace calculadora
             {
                 carregamentoFalso.Value = carregamentoFalso.Value + 10;
             }
-            if (carregamentoFalso.Value == 100)
+            if (carregamentoFalso.Value == 10)
             {
                 calculadora frmTeste = new calculadora();
                 frmTeste.Show();
                 tmrLoading.Stop();
                 this.Hide();
             }
+        }
+
+        private void carregamentoFalso_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

@@ -57,6 +57,7 @@
             carregamentoFalso.Name = "carregamentoFalso";
             carregamentoFalso.Size = new Size(776, 24);
             carregamentoFalso.TabIndex = 2;
+            carregamentoFalso.Click += carregamentoFalso_Click;
             // 
             // pictureBox1
             // 
