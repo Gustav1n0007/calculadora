@@ -2,7 +2,8 @@ namespace calculadora
 {
     public partial class frmSplash : Form
     {
-        Random random = new Random();
+        List<string> loading = new List<string>() { "Loading.", "Loading..", "Loading..." };
+        int teste = 0;
         public frmSplash()
         {
             InitializeComponent();
@@ -21,7 +22,7 @@ namespace calculadora
             }
             if (carregamentoFalso.Value == 10)
             {
-                calculadora frmTeste = new calculadora();
+                frmCalculadora frmTeste = new frmCalculadora();
                 frmTeste.Show();
                 tmrLoading.Stop();
                 this.Hide();
@@ -31,6 +32,17 @@ namespace calculadora
         private void carregamentoFalso_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void tmrEfeito_Tick(object sender, EventArgs e)
+        {
+
+            lblLoading.Text = loading[teste];
+            teste++;
+            if (teste > 2)
+            {
+                teste = 0;
+            }
         }
     }
 }

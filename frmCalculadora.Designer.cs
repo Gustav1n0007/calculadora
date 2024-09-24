@@ -1,6 +1,6 @@
 ﻿namespace calculadora
 {
-    partial class calculadora
+    partial class frmCalculadora
     {
         /// <summary>
         /// Required designer variable.
@@ -45,6 +45,8 @@
             buttonMultiplica = new Button();
             text = new TextBox();
             button10 = new Button();
+            button11 = new Button();
+            button12 = new Button();
             SuspendLayout();
             // 
             // button1
@@ -231,11 +233,34 @@
             button10.Text = "C";
             button10.UseVisualStyleBackColor = true;
             // 
-            // calculadora
+            // button11
+            // 
+            button11.Font = new Font("Segoe UI Black", 18F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            button11.Location = new Point(132, 510);
+            button11.Name = "button11";
+            button11.Size = new Size(96, 68);
+            button11.TabIndex = 17;
+            button11.Text = "C°";
+            button11.UseVisualStyleBackColor = true;
+            button11.Click += this.button11_Click;
+            // 
+            // button12
+            // 
+            button12.Font = new Font("Segoe UI Black", 18F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            button12.Location = new Point(234, 510);
+            button12.Name = "button12";
+            button12.Size = new Size(96, 68);
+            button12.TabIndex = 18;
+            button12.Text = "F°";
+            button12.UseVisualStyleBackColor = true;
+            // 
+            // frmCalculadora
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(461, 528);
+            ClientSize = new Size(461, 590);
+            Controls.Add(button12);
+            Controls.Add(button11);
             Controls.Add(button10);
             Controls.Add(text);
             Controls.Add(buttonMultiplica);
@@ -253,7 +278,7 @@
             Controls.Add(button3);
             Controls.Add(button2);
             Controls.Add(button1);
-            Name = "calculadora";
+            Name = "frmCalculadora";
             Text = "calculadora";
             ResumeLayout(false);
             PerformLayout();
@@ -278,5 +303,7 @@
         private Button buttonMultiplica;
         private TextBox text;
         private Button button10;
+        private Button button11;
+        private Button button12;
     }
 }
