@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace calculadora
 {
-    public partial class calculadora : Form
+    public partial class frmCalculadora : Form
     {
-        public calculadora()
+        public frmCalculadora()
         {
             InitializeComponent();
         }
@@ -119,6 +119,12 @@ namespace calculadora
         private void button0_Click(object sender, EventArgs e)
         {
             text.Text += 0;
+        }
+
+        private void button11_Click(object sender, EventArgs e)
+        {
+            frmCelsius frmTeste = new frmCelsius();
+            frmTeste.ShowDialog();
         }
     }
 }

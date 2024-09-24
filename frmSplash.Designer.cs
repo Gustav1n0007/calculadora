@@ -36,6 +36,7 @@
             pictureBox2 = new PictureBox();
             lblLoading = new Label();
             tmrLoading = new System.Windows.Forms.Timer(components);
+            tmrEfeito = new System.Windows.Forms.Timer(components);
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
             SuspendLayout();
@@ -86,15 +87,21 @@
             lblLoading.ForeColor = SystemColors.Control;
             lblLoading.Location = new Point(20, 365);
             lblLoading.Name = "lblLoading";
-            lblLoading.Size = new Size(176, 46);
+            lblLoading.Size = new Size(0, 46);
             lblLoading.TabIndex = 5;
-            lblLoading.Text = "Loading...";
+            lblLoading.TextAlign = ContentAlignment.TopCenter;
             // 
             // tmrLoading
             // 
             tmrLoading.Enabled = true;
             tmrLoading.Interval = 1000;
             tmrLoading.Tick += tmrLoading_Tick;
+            // 
+            // tmrEfeito
+            // 
+            tmrEfeito.Enabled = true;
+            tmrEfeito.Interval = 500;
+            tmrEfeito.Tick += tmrEfeito_Tick;
             // 
             // frmSplash
             // 
@@ -129,5 +136,6 @@
         private PictureBox pictureBox2;
         private Label lblLoading;
         private System.Windows.Forms.Timer tmrLoading;
+        private System.Windows.Forms.Timer tmrEfeito;
     }
 }
