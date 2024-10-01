@@ -45,8 +45,11 @@
             buttonMultiplica = new Button();
             text = new TextBox();
             button10 = new Button();
-            button11 = new Button();
-            button12 = new Button();
+            menuStrip1 = new MenuStrip();
+            menuToolStripMenuItem = new ToolStripMenuItem();
+            celsiusParaFahrenheitToolStripMenuItem = new ToolStripMenuItem();
+            MetrosParaCentimetros = new ToolStripMenuItem();
+            menuStrip1.SuspendLayout();
             SuspendLayout();
             // 
             // button1
@@ -217,10 +220,10 @@
             // text
             // 
             text.Font = new Font("Old English Text MT", 27.75F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point, 0);
-            text.Location = new Point(30, 12);
+            text.Location = new Point(30, 60);
             text.Multiline = true;
             text.Name = "text";
-            text.Size = new Size(402, 101);
+            text.Size = new Size(402, 68);
             text.TabIndex = 15;
             // 
             // button10
@@ -233,34 +236,41 @@
             button10.Text = "C";
             button10.UseVisualStyleBackColor = true;
             // 
-            // button11
+            // menuStrip1
             // 
-            button11.Font = new Font("Segoe UI Black", 18F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            button11.Location = new Point(132, 510);
-            button11.Name = "button11";
-            button11.Size = new Size(96, 68);
-            button11.TabIndex = 17;
-            button11.Text = "C°";
-            button11.UseVisualStyleBackColor = true;
-            button11.Click += this.button11_Click;
+            menuStrip1.Items.AddRange(new ToolStripItem[] { menuToolStripMenuItem });
+            menuStrip1.Location = new Point(0, 0);
+            menuStrip1.Name = "menuStrip1";
+            menuStrip1.Size = new Size(461, 24);
+            menuStrip1.TabIndex = 19;
+            menuStrip1.Text = "menuStrip1";
             // 
-            // button12
+            // menuToolStripMenuItem
             // 
-            button12.Font = new Font("Segoe UI Black", 18F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            button12.Location = new Point(234, 510);
-            button12.Name = "button12";
-            button12.Size = new Size(96, 68);
-            button12.TabIndex = 18;
-            button12.Text = "F°";
-            button12.UseVisualStyleBackColor = true;
+            menuToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { celsiusParaFahrenheitToolStripMenuItem, MetrosParaCentimetros });
+            menuToolStripMenuItem.Name = "menuToolStripMenuItem";
+            menuToolStripMenuItem.Size = new Size(50, 20);
+            menuToolStripMenuItem.Text = "Menu";
+            // 
+            // celsiusParaFahrenheitToolStripMenuItem
+            // 
+            celsiusParaFahrenheitToolStripMenuItem.Name = "celsiusParaFahrenheitToolStripMenuItem";
+            celsiusParaFahrenheitToolStripMenuItem.Size = new Size(205, 22);
+            celsiusParaFahrenheitToolStripMenuItem.Text = "Celsius para fahrenheit";
+            celsiusParaFahrenheitToolStripMenuItem.Click += celsiusParaFahrenheitToolStripMenuItem_Click;
+            // 
+            // MetrosParaCentimetros
+            // 
+            MetrosParaCentimetros.Name = "MetrosParaCentimetros";
+            MetrosParaCentimetros.Size = new Size(205, 22);
+            MetrosParaCentimetros.Text = "Metros para Centimetros";
+            MetrosParaCentimetros.Click += fahrenheitParaCelsiusToolStripMenuItem_Click;
             // 
             // frmCalculadora
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(461, 590);
-            Controls.Add(button12);
-            Controls.Add(button11);
+            ClientSize = new Size(461, 519);
             Controls.Add(button10);
             Controls.Add(text);
             Controls.Add(buttonMultiplica);
@@ -278,8 +288,11 @@
             Controls.Add(button3);
             Controls.Add(button2);
             Controls.Add(button1);
+            Controls.Add(menuStrip1);
             Name = "frmCalculadora";
             Text = "calculadora";
+            menuStrip1.ResumeLayout(false);
+            menuStrip1.PerformLayout();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -303,7 +316,9 @@
         private Button buttonMultiplica;
         private TextBox text;
         private Button button10;
-        private Button button11;
-        private Button button12;
+        private MenuStrip menuStrip1;
+        private ToolStripMenuItem menuToolStripMenuItem;
+        private ToolStripMenuItem celsiusParaFahrenheitToolStripMenuItem;
+        private ToolStripMenuItem MetrosParaCentimetros;
     }
 }

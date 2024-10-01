@@ -126,5 +126,16 @@ namespace calculadora
             frmCelsius frmTeste = new frmCelsius();
             frmTeste.ShowDialog();
         }
+
+        private void celsiusParaFahrenheitToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmCelsius frmTeste = new frmCelsius();
+            frmTeste.ShowDialog();
+        }
+
+        private void fahrenheitParaCelsiusToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
